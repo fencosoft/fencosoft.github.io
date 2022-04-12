@@ -7,6 +7,7 @@ title: Fencosoft API Documentation
 Welcome to the DataGen API documentation page. 
 Please review this document thoroughly before posting requests to the API.
 
+
 ## Url Parameters
 The only required parameter is quantity.
 
@@ -16,8 +17,9 @@ For example, if you would like 500 documents returned you would post your reques
 /api/v1/generate/500
 ```
 
+
 ## Request Body
-The request body requires the `schema` object.
+The request body requires the [schema]() object.
 Within this object you will define your entire schema and data types for each field.
 
 Basic request example:
@@ -52,7 +54,7 @@ with a single document. The returned document has the field name that was define
 The `schema` object is structured like a typical JSON document.
 
 | Data Types  |
-| ------------- |
+| --- |
 | Content Cell  |
 | Content Cell  |
 
