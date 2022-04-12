@@ -9,13 +9,19 @@ Welcome to the DataGen API documentation page. Please read through carefully bef
 
 ### Url Parameters
 The only required parameter is quantity.
+
 For example, if you would like 500 documents returned you would post your request like this:
 
-`/api/v1/generate/[500]()`
+```
+/api/v1/generate/[500]()
+```
 
 ### Request Body
-The request body requires
+The request body requires the `schema` object.
 
+Within this object is where you will define your entire schema and data types for each field.
+
+Basic request example:
 ```json
 {
     "schema": {
