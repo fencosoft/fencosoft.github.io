@@ -1,11 +1,24 @@
 ---
 layout: default
-title: Blogging Like a Hacker
+title: Fencosoft API Documentation
 ---
 
-## Welcome to GitHub Pages
+## DataGen API Reference & Tutorial
 
-You can use the [editor on GitHub](https://github.com/fencosoft/fencosoft.github.io/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
+# Request Body
+
+The request body is structured as follows
+
+```json
+{
+	"schema": {
+		"desiredFieldName": {
+			"type": "int",
+			"min": 100,
+			"max": 2000
+	}
+}
+```
 
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
@@ -13,11 +26,13 @@ Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://j
 
 Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
-```markdown
+```
 Syntax highlighted code block
 
 # Header 1
+
 ## Header 2
+
 ### Header 3
 
 - Bulleted
