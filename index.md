@@ -54,35 +54,17 @@ with a single document. The returned document has the field name that was define
 The `schema` object is structured like a typical JSON document.
 
 ### Data Types:
-| Data Type | Reserved Type | Notes |
-| --- | --- | --- |
-| bool |  |  |
-| float |  |  |
-| int |  |  |
-| date |  |  |
-| dateTime |  |  |
-| uuid1 |  |  |
-| uuid4 |  |  |
-| string |   
-- firstName
-- lastName
-- middleName
-- fullName
-- businessName
-- address1
-- address2
-- city
-- state
-- stateName
-- zip
-- country
-- phone
-- url
-- email
-- imageUrl
-- searchable
-- varchar  |  |
-| array |  |  |
+| Data Type | Notes                           |
+|:----------|:--------------------------------|
+| bool      |                                 |
+| float     |                                 |
+| int       |                                 |
+| date      |                                 |
+| dateTime  |                                 |
+| uuid1     |                                 |
+| uuid4     |                                 |
+| string    | Must specify a `reervedType`    |
+| array     | Can contain any data type above |
 
 
 - bool
