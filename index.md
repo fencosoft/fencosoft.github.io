@@ -3,20 +3,26 @@ layout: default
 title: Fencosoft API Documentation
 ---
 
-## DataGen API Reference & Tutorial
+# DataGen API Reference & Tutorial
 
-# Request Body
+Welcome to the DataGen API documentation page. Please read through carefully before posting requests to the API.
 
-The request body is structured as follows
+### Url Parameters
+The only required parameter is quantity.
+For example, if you would like 500 documents returned you would post your request like this:
+`/api/v1/generate/500`
+
+### Request Body
+The request body requires
 
 ```json
 {
-	"schema": {
-		"desiredFieldName": {
-			"type": "int",
-			"min": 100,
-			"max": 2000
-	}
+    "schema": {
+        "desiredFieldName": {
+            "type": "int",
+            "min": 100,
+            "max": 2000
+    }
 }
 ```
 
