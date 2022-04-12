@@ -54,6 +54,14 @@ with a single document. The returned document has the field name that was define
 The `schema` object is structured like a typical JSON document.
 
 ### Data Types:
+
+| head1        | head two          | three |
+|:-------------|:------------------|:------|
+| ok           | good swedish fish | nice  |
+| out of stock | good and plenty   | nice  |
+| ok           | good `oreos`      | hmm   |
+| ok           | good `zoute` drop | yumm  |
+
 | Data Type | Notes                           |
 |:----------|:--------------------------------|
 | bool      |                                 |
