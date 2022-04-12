@@ -10,7 +10,8 @@ Welcome to the DataGen API documentation page. Please read through carefully bef
 ### Url Parameters
 The only required parameter is quantity.
 For example, if you would like 500 documents returned you would post your request like this:
-`/api/v1/generate/500`
+
+`/api/v1/generate/[500]()`
 
 ### Request Body
 The request body requires
@@ -26,7 +27,6 @@ The request body requires
 }
 ```
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
 ### Markdown
 
