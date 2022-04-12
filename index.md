@@ -30,7 +30,7 @@ Basic request example:
       "type": "int",
         "min": 100,
         "max": 2000
-	}
+    }
   }
 }
 ```
@@ -55,40 +55,40 @@ The `schema` object is structured like a typical JSON document.
 
 #### Data Types:
 
-| Data Type | Notes                           |
-|:----------|:--------------------------------|
-| bool      |                                 |
-| float     |                                 |
-| int       |                                 |
-| date      |                                 |
-| dateTime  |                                 |
-| uuid1     |                                 |
-| uuid4     |                                 |
-| string    | Must specify a `reservedType`   |
-| array     | Can contain any data type above |
+| Data Type | Notes                                            |
+|:----------|:-------------------------------------------------|
+| bool      |                                                  |
+| float     |                                                  |
+| int       |                                                  |
+| date      | Just a date                                      |
+| dateTime  | Date and time                                    |
+| uuid1     |                                                  |
+| uuid4     |                                                  |
+| string    | Must specify a `reservedType`                    |
+| array     | Can contain any data type above, including array |
 
 #### ReservedTypes:
 
-| reservedType | Description                        |
-|:-------------|:-----------------------------------|
-| firstName    |                                    |
-| lastName     |                                    |
-| middleName   |                                    |
-| fullName     |                                    |
-| businessName |                                    |
-| address1     |                                    |
-| address2     |                                    |
-| city         |                                    |
-| state        |                                    |
-| stateName    |                                    |
-| zip          |                                    |
-| country      |                                    |
-| phone        |                                    |
-| url          |                                    |
-| email        |                                    |
-| imageUrl     |                                    |
-| searchable   |                                    |
-| varchar      |                                    |
+| reservedType | Description                                                         |
+|:-------------|:--------------------------------------------------------------------|
+| firstName    | A randomly selected first name                                      |
+| lastName     | A randomly selected last name                                       |
+| middleName   | A randomly selected first name or inital                            |
+| fullName     | A randomly selected first and last name with randomized middle name |
+| businessName | A randomly generated business name constructed from business words  |
+| address1     |                                                                     |
+| address2     |                                                                     |
+| city         |                                                                     |
+| state        |                                                                     |
+| stateName    |                                                                     |
+| zip          |                                                                     |
+| country      |                                                                     |
+| phone        |                                                                     |
+| url          |                                                                     |
+| email        |                                                                     |
+| imageUrl     |                                                                     |
+| searchable   |                                                                     |
+| varchar      |                                                                     |
 
 
 ## Response Object
