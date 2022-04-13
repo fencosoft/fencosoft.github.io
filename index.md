@@ -62,10 +62,10 @@ I would build my request like this:
 ```json
 {
   "schema": {
-    "productName": {  // declare the name of the field
-      "type": "string",  // indicate the data type
-        "reservedType": "searchable",  // indicate the reservedType (this will be explained more)
-          "minWords": 1,  // configure the parameters for the reservedType
+    "productName": {
+      "type": "string",
+        "reservedType": "searchable",
+          "minWords": 1,
           "maxWords": 4,
           "maxLength": 120
     },
@@ -90,7 +90,7 @@ I would build my request like this:
 ```
 Then I would call the POST to the API and set the *{quantity}* parameter to 5:
 ```
-/api/v1/generate/10
+/api/v1/generate/5
 ```
 
 And here is an example response from the API given the request above:
