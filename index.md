@@ -134,44 +134,45 @@ And here is an example response from the API given the request above:
 }
 ```
 
-#### Schema Fields
+### Schema Fields
 A schema field is an object that defines the name of the field, the data type of the field value and
 parameter values for the given data type.
 
 Let's use the field `productNumber` from our example above.
 We have declared that this field will return a random value of type `int`.
-The `int` type requires a `min` and `max` range value so that it can return a random integer between the two.
+The `int` type requires `min` and `max` range values so that it can return a random integer between the two.
 In our example we set the range from 1000 to 9999.
-```json
+```js
 {
   "schema": {
     "productNumber": { // Define the name of the field
       "type": "int", // Declare the data type
-      "min": 1000, // Set the min range value
-      "max": 9999 // Set the max range value
+      "min": 1000, // The lowest value in the range
+      "max": 9999 // The highest value in the range
     }
   }
 }
 ```
 
-### Data Types:
+### Data Types
+There are 9 basic data types to choose from when building your schema.
+See the charts below for configuration options and usage details.
 
-| Type Name | Notes                                            |
-|:----------|:-------------------------------------------------|
+|           | * Required attribute                                                    |
+|:----------|:------------------------------------------------------------------------|
+| bool      | Returns "true" or "false" (without quotes)                              |
+| float     | `*max`: -9007199254740991 to 9007199254740991                           |
+|           | `#min`: -9007199254740991 to 9007199254740991 (must be less than `max`) |
+| int       |                                                                         |
+| date      |                                                                         |
+| dateTime  |                                                                         |
+| uuid1     |                                                                         |
+| uuid4     |                                                                         |
+| string    |                                                                         |
+| array     |                                                                         |
 
-|:----------|:-------------------------------------------------|
-| bool      |                                                  |
-| float     |                                                  |
-| int       |                                                  |
-| date      |                                                  |
-| dateTime  |                                                  |
-| uuid1     |                                                  |
-| uuid4     |                                                  |
-| string    | Must specify a `reservedType`                    |
-| array     | Can contain any data type above, including array |
 
-
-#### ReservedTypes:
+##### ReservedTypes
 
 | Type Name    | Description                                                         |
 |:-------------|:--------------------------------------------------------------------|
