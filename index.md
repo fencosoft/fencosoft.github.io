@@ -225,6 +225,7 @@ formats while others
 ## Response Object
 
 The response object is very straightforward and consists of the following fields.
+
 |             |                                                                              |
 |:------------|:-----------------------------------------------------------------------------|
 | requestId   | A system generated guid used for tracking.                                   |
