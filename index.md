@@ -9,9 +9,9 @@ Please review this document thoroughly before posting requests to the API.
 
 * * *
 ## Url Parameters
-The only required parameter is **{quantity}.
+The only required parameter is *{quantity}*.
 
-For example, if you would like 500 documents returned you would set the **{quantity} parameter like this:
+For example, if you would like 500 documents returned you would set the *{quantity}* parameter like this:
 
 ```
 /api/v1/generate/500
@@ -88,7 +88,7 @@ I would build my request like this:
   }
 }
 ```
-Then I would call the POST to the API and set the **{quantity} parameter to 5:
+Then I would call the POST to the API and set the *{quantity}* parameter to 5:
 ```
 /api/v1/generate/10
 ```
