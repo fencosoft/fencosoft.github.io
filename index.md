@@ -52,7 +52,7 @@ As you can see, we've requested 1 object to be returned with the given schema an
 with a single object. The returned object contains a field named as it was defined in the schema with a value that is a randomly generated integer between 100 and 2000, as configured in the schema definition.
 
 The `schema` object is structured like a standard JSON document and it defines the way you want your output objects/data to look.
-For example, if I wanted to create an array of 10 products that contain the following fields:
+For example, if I wanted to create an array of 5 products that contain the following fields:
 - productName
 - productNumber
 - price
@@ -88,7 +88,7 @@ I would build my request like this:
   }
 }
 ```
-Then I would call the POST to the API and set the **{quantity} parameter to 10:
+Then I would call the POST to the API and set the **{quantity} parameter to 5:
 ```
 /api/v1/generate/10
 ```
@@ -96,69 +96,39 @@ Then I would call the POST to the API and set the **{quantity} parameter to 10:
 And here is an example response from the API given the request above:
 ```json
 {
-  "requestId": "7dd5d8dc-4e8b-43e0-8863-7bb71d51eb03",
+  "requestId": "2fcd1b12-8d1e-4e9b-ac9b-1f50eddc33ef",
   "success": true,
-  "recordCount": 10,
+  "recordCount": 5,
   "data": [
     {
-      "productName": "skip ashamed linen crash",
-      "productNumber": 7133,
-      "price": 189.81,
-      "quantityOnHand": 23
+      "productName": "undress reason",
+      "productNumber": 2594,
+      "price": 84.11,
+      "quantityOnHand": 18
     },
     {
-      "productName": "terrific plastic overflow",
-      "productNumber": 6491,
-      "price": 22.71,
-      "quantityOnHand": 132
+      "productName": "egg flame statement",
+      "productNumber": 5882,
+      "price": 11.18,
+      "quantityOnHand": 165
     },
     {
-      "productName": "kindhearted bite-sized effect",
-      "productNumber": 5715,
-      "price": 123.84,
-      "quantityOnHand": 37
+      "productName": "physical gather reconcile grant",
+      "productNumber": 8312,
+      "price": 31.15,
+      "quantityOnHand": 33
     },
     {
-      "productName": "horn treat",
-      "productNumber": 9163,
-      "price": 129.88,
-      "quantityOnHand": 135
+      "productName": "cuddly",
+      "productNumber": 9333,
+      "price": 70.71,
+      "quantityOnHand": 179
     },
     {
-      "productName": "protest window travel",
-      "productNumber": 8371,
-      "price": 111.91,
-      "quantityOnHand": 8
-    },
-    {
-      "productName": "tired",
-      "productNumber": 9372,
-      "price": 84.59,
-      "quantityOnHand": 88
-    },
-    {
-      "productName": "quarrel hot cow",
-      "productNumber": 1188,
-      "price": 102.81,
-      "quantityOnHand": 173
-    },
-    {
-      "productName": "estate degree comfortable",
-      "productNumber": 7557,
-      "price": 159.48,
-      "quantityOnHand": 38
-    },
-    {
-      "productName": "suit",
-      "productNumber": 5713,
-      "price": 161.74,
-      "quantityOnHand": 149
-    },
-    {
-      "productName": "mom line",
-      "productNumber": 3405,
-      "price": 14.33,
-      "quantityOnHand": 85
+      "productName": "stomach",
+      "productNumber": 8578,
+      "price": 109.78,
+      "quantityOnHand": 195
     }
   ]
 }
