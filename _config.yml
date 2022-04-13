@@ -1,3 +1,4 @@
 theme: jekyll-theme-leap-day
 title: Fencosoft
 description: API Documentation & Tutorials
+show_downloads: false
