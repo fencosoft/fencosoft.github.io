@@ -225,13 +225,13 @@ formats while others
 ## Response Object
 
 The response object is very straightforward and consists of the following fields.
-
 |             |                                                                              |
 |:------------|:-----------------------------------------------------------------------------|
-| requestId   | A system generated guid used for tracking.                                   |
+| requestId   | A system generated guid used for tracking[^1].                               |
 | success     | A boolean value to indicate the success of the request.                      |
 | recordCount | The number of records returned.                                              |
-| data        | An array of documents/objects populated with data as defined in the `schema` |
+| data        | An array of objects populated with data as defined in the `schema`           |
+[^1]: Please supply the `requestId` value if you experience an exception or unexpected values in the reponse data. 
  
 ```json
 {
