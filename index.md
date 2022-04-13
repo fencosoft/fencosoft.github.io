@@ -173,10 +173,53 @@ See the charts below for configuration options and usage details.
 | string    |                                                                         |
 | array     |                                                                         |
 
+#### custom
+The `custom` data type can be used to define an embedded document. This data type is
+useful for JSON objects or NoSQL databases but you may find it useful when you need to create
+relational data for SQL type databases.
+```json
+{
+  "schema": {
+    "arrayOfCustomType": {
+      "type": "array",
+      "minElements": 1,
+      "maxElements": 3,
+      "dataType": "custom",
+      "_definition_": {
+        "recordId": {
+          "type": "uuid4"
+        },
+        "createDate": {
+          "type": "dateTime",
+          "dayMin": 1,
+          "dayMax": 31,
+          "monthMin": 1,
+          "monthMax": 12,
+          "yearMin": 1955,
+          "yearMax": 2150,
+          "hourMin": 0,
+          "hourMax": 23,
+          "minuteMin": 0,
+          "minuteMax": 59,
+          "secondMin": 0,
+          "secondMax": 59,					
+          "format": "yyyy-MM-dd hh:mm:ss"					
+        },
+        "boolValue": {
+          "type": "bool"
+        }
+      }
+    }
+  }
+}
+```
 
-##### ReservedTypes
 
-| Type Name    | Description                                                         |
+#### ReservedTypes
+Reserved types are strings that serve a specific purpose and return "real world" values. Some follow specific
+formats while others 
+
+| Type         | * Required attribute                                                |
 |:-------------|:--------------------------------------------------------------------|
 | firstName    | A randomly selected first name                                      |
 | lastName     | A randomly selected last name                                       |
