@@ -160,10 +160,12 @@ See the charts below for configuration options and usage details.
 
 |           | * Required attribute                                                    |
 |:----------|:------------------------------------------------------------------------|
-| bool      | Returns "true" or "false" (without quotes)                              |
+| bool      | Returns `true` or `false`                                               |
 | float     | `*max`: -9007199254740991 to 9007199254740991                           |
-|           | `#min`: -9007199254740991 to 9007199254740991 (must be less than `max`) |
-| int       |                                                                         |
+|           | `*min`: -9007199254740991 to 9007199254740991 (must be less than `max`) |
+|           | `*precision`: 1 to 14
+| int       | `*max`: -9007199254740991 to 9007199254740991                           |
+|           | `*min`: -9007199254740991 to 9007199254740991 (must be less than `max`) |
 | date      |                                                                         |
 | dateTime  |                                                                         |
 | uuid1     |                                                                         |
