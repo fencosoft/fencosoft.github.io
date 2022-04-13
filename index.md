@@ -243,7 +243,10 @@ formats while others
 
 ## Response Object
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+The response object is very straightforward and consists of the following fields.
+* requestId
+  * A system generated guid used to track each request.
+    If you ever experience an exception or unexpected data in a response, provide the `requestId`
 ```json
 {
   "requestId": "30bfdf44-00a5-4025-b07f-de2ee23b6cdd",
