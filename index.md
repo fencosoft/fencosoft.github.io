@@ -9,9 +9,9 @@ Please review this document thoroughly before posting requests to the API.
 
 * * *
 ## Url Parameters
-The only required parameter is quantity.
+The only required parameter is **{quantity}.
 
-For example, if you would like 500 documents returned you would post your request like this:
+For example, if you would like 500 documents returned you would set the **{quantity} parameter like this:
 
 ```
 /api/v1/generate/500
@@ -61,39 +61,39 @@ For example, if I wanted to create an array of 10 products that contain the foll
 I would build my request like this:
 ```json
 {
-	"schema": {
-		"productName": {                    // declare the name of the field
-			"type": "string",               // indicate the data type
-			"reservedType": "searchable",   // indicate the reservedType (this will be explained more)
-			"minWords": 1,                  // configure the parameters for the reservedType
-			"maxWords": 4,
-      "maxLength": 120
-		},
-		"productNumber": {
-			"type": "int",
-			"min": 1000,
-			"max": 9999
-		},
-		"price": {
-			"type": "float",
-			"min": 1.01,
-			"max": 199.99,
-			"precision": 2
-		},
-		"quantityOnHand": {
-			"type": "int",
-			"min": 0,
-			"max": 200
-		}
-	}
+  "schema": {
+    "productName": {  // declare the name of the field
+      "type": "string",  // indicate the data type
+        "reservedType": "searchable",  // indicate the reservedType (this will be explained more)
+          "minWords": 1,  // configure the parameters for the reservedType
+          "maxWords": 4,
+          "maxLength": 120
+    },
+    "productNumber": {
+      "type": "int",
+        "min": 1000,
+        "max": 9999
+    },
+    "price": {
+      "type": "float",
+        "min": 1.01,
+        "max": 199.99,
+        "precision": 2
+    },
+    "quantityOnHand": {
+      "type": "int",
+        "min": 0,
+        "max": 200
+    }
+  }
 }
 ```
-Then I would call the POST to the API like this
+Then I would call the POST to the API and set the **{quantity} parameter to 10:
 ```
 /api/v1/generate/10
 ```
 
-The response would be returned like this:
+And here is an example response from the API given the request above:
 ```json
 {
   "requestId": "7dd5d8dc-4e8b-43e0-8863-7bb71d51eb03",
@@ -165,7 +165,6 @@ The response would be returned like this:
 ```
 
 ### Data Types:
-```
 | Type Name | Notes                                            |
 |:----------|:-------------------------------------------------|
 | bool      |                                                  |
@@ -177,7 +176,7 @@ The response would be returned like this:
 | uuid4     |                                                  |
 | string    | Must specify a `reservedType`                    |
 | array     | Can contain any data type above, including array |
-```
+
 
 #### ReservedTypes:
 
