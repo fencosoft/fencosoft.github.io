@@ -9,9 +9,9 @@ Please review this document thoroughly before posting requests to the API.
 
 * * *
 ## Url Parameters
-The only required parameter is *{quantity}*.
+The only required parameter is `quantity`.
 
-For example, if you would like 500 documents returned you would set the *{quantity}* parameter like this:
+For example, if you would like 500 documents returned you would set the `quantity` parameter like this:
 
 ```
 /api/v1/generate/500
@@ -64,31 +64,31 @@ I would build my request like this:
   "schema": {
     "productName": {
       "type": "string",
-        "reservedType": "searchable",
-          "minWords": 1,
-          "maxWords": 4,
-          "maxLength": 120
+      "reservedType": "searchable",
+        "minWords": 1,
+        "maxWords": 4,
+        "maxLength": 120
     },
     "productNumber": {
       "type": "int",
-        "min": 1000,
-        "max": 9999
+      "min": 1000,
+      "max": 9999
     },
     "price": {
       "type": "float",
-        "min": 1.01,
-        "max": 199.99,
-        "precision": 2
+      "min": 1.01,
+      "max": 199.99,
+      "precision": 2
     },
     "quantityOnHand": {
       "type": "int",
-        "min": 0,
-        "max": 200
+      "min": 0,
+      "max": 200
     }
   }
 }
 ```
-Then I would call the POST to the API and set the *{quantity}* parameter to 5:
+Then I would call the POST to the API and set the `quantity` parameter to 5:
 ```
 /api/v1/generate/5
 ```
@@ -134,14 +134,37 @@ And here is an example response from the API given the request above:
 }
 ```
 
+#### Schema Fields
+A schema field is an object that defines the name of the field, the data type of the field value and
+parameter values for the given data type.
+
+Let's use the field `productNumber` from our example above.
+We have declared that this field will return a random value of type `int`.
+The `int` type requires a `min` and `max` range value so that it can return a random integer between the two.
+In our example we set the range from 1000 to 9999.
+```json
+{
+  "schema": {
+    "productNumber": { // Define the name of the field
+      "type": "int", // Declare the data type
+      "min": 1000, // Set the min range value
+      "max": 9999 // Set the max range value
+    }
+  }
+}
+```
+
 ### Data Types:
+
 | Type Name | Notes                                            |
+|:----------|:-------------------------------------------------|
+
 |:----------|:-------------------------------------------------|
 | bool      |                                                  |
 | float     |                                                  |
 | int       |                                                  |
-| date      | Just a date                                      |
-| dateTime  | Date and time                                    |
+| date      |                                                  |
+| dateTime  |                                                  |
 | uuid1     |                                                  |
 | uuid4     |                                                  |
 | string    | Must specify a `reservedType`                    |
