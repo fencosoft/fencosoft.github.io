@@ -188,25 +188,6 @@ relational data for SQL type databases.
       "_definition_": {
         "recordId": {
           "type": "uuid4"
-        },
-        "createDate": {
-          "type": "dateTime",
-          "dayMin": 1,
-          "dayMax": 31,
-          "monthMin": 1,
-          "monthMax": 12,
-          "yearMin": 1955,
-          "yearMax": 2150,
-          "hourMin": 0,
-          "hourMax": 23,
-          "minuteMin": 0,
-          "minuteMax": 59,
-          "secondMin": 0,
-          "secondMax": 59,					
-          "format": "yyyy-MM-dd hh:mm:ss"					
-        },
-        "boolValue": {
-          "type": "bool"
         }
       }
     }
@@ -244,9 +225,13 @@ formats while others
 ## Response Object
 
 The response object is very straightforward and consists of the following fields.
-* requestId
-  * A system generated guid used to track each request.
-    If you ever experience an exception or unexpected data in a response, provide the `requestId`
+|             |         |
+|:------------|:--------|
+| requestId   | A system generated guid used for tracking.              |
+| success     | A boolean value to indicate the success of the request. |
+| recordCount | The number of records returned.                         |
+| data        | An array of documents/objects populated with data as defined in the `schema` |
+ 
 ```json
 {
   "requestId": "30bfdf44-00a5-4025-b07f-de2ee23b6cdd",
