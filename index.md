@@ -142,7 +142,7 @@ Let's use the field `productNumber` from our example above.
 We have declared that this field will return a random value of type `int`.
 The `int` type requires `min` and `max` range values so that it can return a random integer between the two.
 In our example we set the range from 1000 to 9999.
-```js
+```json
 {
   "schema": {
     "productNumber": { // Define the name of the field
@@ -158,7 +158,7 @@ In our example we set the range from 1000 to 9999.
 There are 9 basic data types to choose from when building your schema.
 See the charts below for configuration options and usage details.
 
-|           | * Required attribute                                                    |
+| Type      | * Required attribute                                                    |
 |:----------|:------------------------------------------------------------------------|
 | bool      | Returns `true` or `false`                                               |
 | float     | `*max`: -9007199254740991 to 9007199254740991                           |
