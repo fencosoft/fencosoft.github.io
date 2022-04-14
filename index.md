@@ -192,10 +192,10 @@ See the charts below for configuration options and usage details.
 | uuid4     | Returns a uuid4 GUID                                                    |
 | string    | `*minLength`: 1 - less than or equal to `maxLength`                     |
 |           | `*maxLength`: 1 - 8000                                                  |
-|           | `reservedType`: See the [Reserved Types](#reservedtypes) table below    |
+|           | `reservedType`: See the [Reserved Types](#reservedtypes) table below.   |
 | array     | `*dataType`: all basic types plus `custom`. Excludes `array`.           |
 
-#### custom
+#### Data Type - custom
 The `custom` data type can be used to define a document within an array. When the `dataType` is set to `custom`
 the `_definition_` attribute is used to define a document schema in exactly the same way as the `schema` attribute.
 ```json
@@ -216,10 +216,10 @@ the `_definition_` attribute is used to define a document schema in exactly the 
 }
 ```
 
-
 #### ReservedTypes
+
 Reserved types are strings that serve a specific purpose and return "real world" values. Some follow specific
-formats while others 
+formats while others are configureable.
 
 | Type         | * Required attribute                                                |
 |:-------------|:--------------------------------------------------------------------|
