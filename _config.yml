@@ -1,4 +1,4 @@
-theme: jekyll-theme-leap-day
+remote_theme: just-the-docs/just-the-docs
 title: Fencosoft
 description: API Documentation & Tutorials
 show_downloads: false
