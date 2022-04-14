@@ -146,9 +146,9 @@ In our example we set the range from 1000 to 9999.
 {
   "schema": {
     "productNumber": { // Define the name of the field
-      "type": "int", // Declare the data type
-      "min": 1000, // The lowest value in the range
-      "max": 9999 // The highest value in the range
+      "type": "int", // Declare a data type
+      "min": 1000, // The lowest value integer in the range
+      "max": 9999 // The highest value integer in the range
     }
   }
 }
@@ -163,9 +163,11 @@ See the charts below for configuration options and usage details.
 | bool      | Returns `true` or `false`                                               |
 | float     | `*max`: -9007199254740991 to 9007199254740991                           |
 |           | `*min`: -9007199254740991 to 9007199254740991 (must be less than `max`) |
-|           | `*precision`: 1 to 14
+|           | `*precision`: 1 to 14                                                   |
+|           | `allowNull`: true or false (allows the value to randomly return `null`) |
 | int       | `*max`: -9007199254740991 to 9007199254740991                           |
 |           | `*min`: -9007199254740991 to 9007199254740991 (must be less than `max`) |
+|           | `allowNull`: true or false (allows the value to randomly return `null`) |
 | date      | `dayMin`: 1 - 31                                                        |
 |           | `dayMax`: 1 - 31                                                        |
 |           | `monthMin`: 1 - 12                                                      |
@@ -173,6 +175,7 @@ See the charts below for configuration options and usage details.
 |           | `*yearMin`: 1 - current year + 200                                      |
 |           | `*yearMax`: 1 - current year + 200                                      |
 |           | `format`: M = month, d = day, y = year. 'MM/dd/yyyy' = 01/01/1970       |
+|           | `allowNull`: true or false (allows the value to randomly return `null`) |
 |           | Default format: 'yyyy-MM-dd'                                              |
 | dateTime  | `dayMin`: 1 - 31                                                          |   
 |           | `dayMax`: 1 - 31                                                          |
@@ -187,13 +190,19 @@ See the charts below for configuration options and usage details.
 |           | `secondMin`: 0 - 59                                                       |
 |           | `secondMax`: 0 - 59                                                       |
 |           | `format`: M = month, d = day, y = year, h = hour, m = minute, s = second  |
-|           | Default format: ISO Date                                                  |
+|           | `allowNull`: true or false (allows the value to randomly return `null`) |
+|           | Default format: ISODate                                                   |
 | uuid1     | Returns a uuid1 GUID                                                      |
 | uuid4     | Returns a uuid4 GUID                                                      |
 | string    | `*minLength`: 1 - less than or equal to `maxLength`                       |
 |           | `*maxLength`: 1 - 8000                                                    |
 |           | `reservedType`: See the [Reserved Types](#reserved-types) table below.    |
+|           | `allowNull`: true or false (allows the value to randomly return `null`)   |
+|           | If `reservedType` is not specified a random varchar string is returned    |
 | array     | `*dataType`: All basic types plus `custom` (see below). Excludes `array`. |
+|           | `minElements`: 0 - 14999                                                  |
+|           | `maxElements`: 1 - 15000                                                  |
+|           | `allowNull`: true or false (allows the value to randomly return `null`)   |
 
 The `custom` data type can be used to define a document within an array. When the `dataType` is set to `custom`
 the `_definition_` attribute is used to define a document schema in exactly the same way as the `schema` attribute 
