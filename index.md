@@ -195,7 +195,7 @@ See the charts below for configuration options and usage details.
 |           | `reservedType`: See the [Reserved Types](#reservedtypes) table below.   |
 | array     | `*dataType`: all basic types plus `custom`. Excludes `array`.           |
 
-#### Data Type - custom
+#### The `custom` data type
 The `custom` data type can be used to define a document within an array. When the `dataType` is set to `custom`
 the `_definition_` attribute is used to define a document schema in exactly the same way as the `schema` attribute.
 ```json
@@ -216,7 +216,7 @@ the `_definition_` attribute is used to define a document schema in exactly the 
 }
 ```
 
-#### ReservedTypes
+#### Reserved Types
 
 Reserved types are strings that serve a specific purpose and return "real world" values. Some follow specific
 formats while others are configureable.
