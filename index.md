@@ -136,7 +136,7 @@ And here is an example response from the API given the request above:
 
 ### Schema Fields
 A schema field is an object that defines the name of the field, the data type of the field value and
-parameter values for the given data type.
+parameter values for the given data type when applicable.
 
 Let's use the field `productNumber` from our example above.
 We have declared that this field will return a random value of type `int`.
@@ -187,12 +187,12 @@ See the charts below for configuration options and usage details.
 |           | `secondMin`: 0 - 59                                                       |
 |           | `secondMax`: 0 - 59                                                       |
 |           | `format`: M = month, d = day, y = year, h = hour, m = minute, s = second  |
-|           | Default format: ISO                                                       |
+|           | Default format: ISO Date                                                  |
 | uuid1     | Returns a uuid1 GUID                                                      |
 | uuid4     | Returns a uuid4 GUID                                                      |
 | string    | `*minLength`: 1 - less than or equal to `maxLength`                       |
 |           | `*maxLength`: 1 - 8000                                                    |
-|           | `reservedType`: See the [Reserved Types](#reserved-types) table below.     |
+|           | `reservedType`: See the [Reserved Types](#reserved-types) table below.    |
 | array     | `*dataType`: All basic types plus `custom` (see below). Excludes `array`. |
 
 The `custom` data type can be used to define a document within an array. When the `dataType` is set to `custom`
@@ -217,8 +217,8 @@ the `_definition_` attribute is used to define a document schema in exactly the 
 
 ### Reserved Types
 
-Reserved types are strings that serve a specific purpose and return "real world" values. Some follow specific
-formats while others are configureable.
+Reserved types are strings that can be used to populate commonly used data field with "real world" values. 
+Some follow specific formats while others are configureable.
 
 | Type         | * Required attribute                                                |
 |:-------------|:--------------------------------------------------------------------|
