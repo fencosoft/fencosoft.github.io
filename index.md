@@ -28,8 +28,8 @@ Basic request example:
   "schema": {
     "desiredFieldName": {
       "type": "int",
-        "intMin": 100,
-        "intMax": 2000
+        "min": 100,
+        "max": 2000
     }
   }
 }
@@ -71,19 +71,19 @@ I would build my request like this:
     },
     "productNumber": {
       "type": "int",
-      "intMin": 1000,
-      "intMax": 9999
+      "min": 1000,
+      "max": 9999
     },
     "price": {
       "type": "float",
-      "floatMin": 1.01,
-      "floatMax": 199.99,
+      "min": 1.01,
+      "max": 199.99,
       "precision": 2
     },
     "quantityOnHand": {
       "type": "int",
-      "intMin": 0,
-      "intMax": 200
+      "min": 0,
+      "max": 200
     }
   }
 }
@@ -147,8 +147,8 @@ In our example we set the range from 1000 to 9999.
   "schema": {
     "productNumber": { // Define the name of the field
       "type": "int", // Declare a data type
-      "intMin": 1000, // The lowest value integer in the range
-      "intMax": 9999 // The highest value integer in the range
+      "min": 1000, // The lowest value integer in the range
+      "max": 9999 // The highest value integer in the range
     }
   }
 }
@@ -161,12 +161,12 @@ See the charts below for configuration options and usage details.
 | Type      | * Required attribute                                                    |
 |:----------|:------------------------------------------------------------------------|
 | bool      | Returns `true` or `false`                                               |
-| float     | `*floatMax`: -9007199254740991 to 9007199254740991                           |
-|           | `*floatMin`: -9007199254740991 to 9007199254740991 (must be less than `max`) |
+| float     | `*max`: -9007199254740991 to 9007199254740991                           |
+|           | `*min`: -9007199254740991 to 9007199254740991 (must be less than `max`) |
 |           | `*precision`: 1 to 14                                                   |
 |           | `allowNull`: true or false (allows the value to randomly return `null`) |
-| int       | `*intMax`: -9007199254740991 to 9007199254740991                           |
-|           | `*intMin`: -9007199254740991 to 9007199254740991 (must be less than `max`) |
+| int       | `*max`: -9007199254740991 to 9007199254740991                           |
+|           | `*min`: -9007199254740991 to 9007199254740991 (must be less than `max`) |
 |           | `allowNull`: true or false (allows the value to randomly return `null`) |
 | date      | `dayMin`: 1 - 31                                                        |
 |           | `dayMax`: 1 - 31                                                        |
@@ -199,9 +199,9 @@ See the charts below for configuration options and usage details.
 |           | `reservedType`: See the [Reserved Types](#reserved-types) table below.    |
 |           | `allowNull`: true or false (allows the value to randomly return `null`)   |
 |           | If `reservedType` is not specified a random varchar string is returned    |
-| array     | `*dataType`: All basic types plus `custom` (see below). Excludes `array`. |
-|           | `minElements`: 0 - 14999                                                  |
+| array     | `minElements`: 0 - 14999                                                  |
 |           | `maxElements`: 1 - 15000                                                  |
+|           | `*dataType`: All basic types plus `custom` (see below). Excludes `array`. |
 |           | `allowNull`: true or false (allows the value to randomly return `null`)   |
 
 The `custom` data type can be used to define a document within an array. When the `dataType` is set to `custom`
