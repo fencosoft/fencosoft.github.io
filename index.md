@@ -196,7 +196,9 @@ See the charts below for configuration options and usage details.
 | array     | `*dataType`: All basic types plus `custom` (see below). Excludes `array`. |
 
 The `custom` data type can be used to define a document within an array. When the `dataType` is set to `custom`
-the `_definition_` attribute is used to define a document schema in exactly the same way as the `schema` attribute.
+the `_definition_` attribute is used to define a document schema in exactly the same way as the `schema` attribute 
+is used to define the overall schema.
+
 ```json
 {
   "schema": {
