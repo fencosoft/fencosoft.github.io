@@ -166,12 +166,24 @@ See the charts below for configuration options and usage details.
 |           | `*precision`: 1 to 14
 | int       | `*max`: -9007199254740991 to 9007199254740991                           |
 |           | `*min`: -9007199254740991 to 9007199254740991 (must be less than `max`) |
-| date      |                                                                         |
-| dateTime  |                                                                         |
+| date      | `dayMin`: 1 - 31                                                        |
+|           | `dayMax`: 1 - 31                                                        |
+|           | `monthMin`: 1 - 12                                                      |
+|           | `monthMax`: 1 - 12                                                      |
+|           | `*yearMin`: 1 - current year + 200                                      |
+|           | `*yearMax`: 1 - current year + 200                                      |
+|           | `format`: MM = month, dd = day, yyyy = year. (MM/dd/yyyy) = 01/01/1970  |
+| dateTime  | `dayMin`: 1 - 31                                                        |
+|           | `dayMax`: 1 - 31                                                        |
+|           | `monthMin`: 1 - 12                                                      |
+|           | `monthMax`: 1 - 12                                                      |
+|           | `*yearMin`: 1 - current year + 200                                      |
+|           | `*yearMax`: 1 - current year + 200                                      |
+|           | `format`: MM = month, dd = day, yyyy = year. (MM/dd/yyyy) = 01/01/1970  |
 | uuid1     |                                                                         |
 | uuid4     |                                                                         |
 | string    |                                                                         |
-| array     |                                                                         |
+| array     | `*dataType`: all basic types plus `custom`, excluding `array`.          |
 
 #### custom
 The `custom` data type can be used to define an embedded document. This data type is
@@ -226,15 +238,14 @@ formats while others
 
 The response object is very straightforward and consists of the following fields.
 
-|             |                                                                              |
-|:------------|:-----------------------------------------------------------------------------|
-| requestId   | A system generated guid used for tracking[^1].                               |
-| success     | A boolean value to indicate the success of the request.                      |
-| recordCount | The number of records returned.                                              |
-| data        | An array of objects populated with data as defined in the `schema`           |
+| Field Name  | Description                                                         |
+|:------------|:--------------------------------------------------------------------|
+| requestId   | A system generated guid used for tracking purposes.                 |
+| success     | A boolean value to indicate the success of the request.             |
+| recordCount | The number of records returned in the data array.                   |
+| data        | An array of objects populated with data as defined in the `schema`  |
 
-[^1]: Please supply the `requestId` value if you experience an exception or unexpected values in the reponse data. 
- 
+
 ```json
 {
   "requestId": "30bfdf44-00a5-4025-b07f-de2ee23b6cdd",
