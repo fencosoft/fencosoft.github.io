@@ -217,7 +217,7 @@ the `_definition_` attribute is used to define a document schema in exactly the 
 
 ### Reserved Types
 
-Reserved types are strings that can be used to populate commonly used data field with "real world" values. 
+Reserved types are strings that can populate commonly used data fields with "real world" values. 
 Some follow specific formats while others are configureable.
 
 | Type         | * Required attribute                                                |
