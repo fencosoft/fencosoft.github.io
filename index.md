@@ -28,8 +28,8 @@ Basic request example:
   "schema": {
     "desiredFieldName": {
       "type": "int",
-        "min": 100,
-        "max": 2000
+        "intMin": 100,
+        "intMax": 2000
     }
   }
 }
@@ -71,19 +71,19 @@ I would build my request like this:
     },
     "productNumber": {
       "type": "int",
-      "min": 1000,
-      "max": 9999
+      "intMin": 1000,
+      "intMax": 9999
     },
     "price": {
       "type": "float",
-      "min": 1.01,
-      "max": 199.99,
+      "floatMin": 1.01,
+      "floatMax": 199.99,
       "precision": 2
     },
     "quantityOnHand": {
       "type": "int",
-      "min": 0,
-      "max": 200
+      "intMin": 0,
+      "intMax": 200
     }
   }
 }
@@ -147,8 +147,8 @@ In our example we set the range from 1000 to 9999.
   "schema": {
     "productNumber": { // Define the name of the field
       "type": "int", // Declare a data type
-      "min": 1000, // The lowest value integer in the range
-      "max": 9999 // The highest value integer in the range
+      "intMin": 1000, // The lowest value integer in the range
+      "intMax": 9999 // The highest value integer in the range
     }
   }
 }
@@ -161,12 +161,12 @@ See the charts below for configuration options and usage details.
 | Type      | * Required attribute                                                    |
 |:----------|:------------------------------------------------------------------------|
 | bool      | Returns `true` or `false`                                               |
-| float     | `*max`: -9007199254740991 to 9007199254740991                           |
-|           | `*min`: -9007199254740991 to 9007199254740991 (must be less than `max`) |
+| float     | `*floatMax`: -9007199254740991 to 9007199254740991                           |
+|           | `*floatMin`: -9007199254740991 to 9007199254740991 (must be less than `max`) |
 |           | `*precision`: 1 to 14                                                   |
 |           | `allowNull`: true or false (allows the value to randomly return `null`) |
-| int       | `*max`: -9007199254740991 to 9007199254740991                           |
-|           | `*min`: -9007199254740991 to 9007199254740991 (must be less than `max`) |
+| int       | `*intMax`: -9007199254740991 to 9007199254740991                           |
+|           | `*intMin`: -9007199254740991 to 9007199254740991 (must be less than `max`) |
 |           | `allowNull`: true or false (allows the value to randomly return `null`) |
 | date      | `dayMin`: 1 - 31                                                        |
 |           | `dayMax`: 1 - 31                                                        |
@@ -190,7 +190,7 @@ See the charts below for configuration options and usage details.
 |           | `secondMin`: 0 - 59                                                       |
 |           | `secondMax`: 0 - 59                                                       |
 |           | `format`: M = month, d = day, y = year, h = hour, m = minute, s = second  |
-|           | `allowNull`: true or false (allows the value to randomly return `null`) |
+|           | `allowNull`: true or false (allows the value to randomly return `null`)   |
 |           | Default format: ISODate                                                   |
 | uuid1     | Returns a uuid1 GUID                                                      |
 | uuid4     | Returns a uuid4 GUID                                                      |
