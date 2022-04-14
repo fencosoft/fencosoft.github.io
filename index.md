@@ -188,15 +188,16 @@ See the charts below for configuration options and usage details.
 |           | `secondMax`: 0 - 59                                                     |
 |           | `format`: M = month, d = day, y = year, h = hour, m = minute, s = second|
 |           | Default format: ISO                                                     |
-| uuid1     | Returns uuid1 GUID                                                      |
-| uuid4     | Returns uuid4 GUID                                                      |
-| string    | `*minLength`: 1 - must be <= `maxLength`                         |
+| uuid1     | Returns a uuid1 GUID                                                    |
+| uuid4     | Returns a uuid4 GUID                                                    |
+| string    | `*minLength`: 1 - less than or equal to `maxLength`                     |
 |           | `*maxLength`: 1 - 8000                                                  |
+|           | `reservedType`: See the [Reserved Types](#reservedtypes) table below    |
 | array     | `*dataType`: all basic types plus `custom`. Excludes `array`.           |
 
 #### custom
 The `custom` data type can be used to define a document within an array. When the `dataType` is set to `custom`
-the `_definition_` attribute is used to define a document schema in exactly the same way as `schema`.
+the `_definition_` attribute is used to define a document schema in exactly the same way as the `schema` attribute.
 ```json
 {
   "schema": {
