@@ -173,7 +173,7 @@ See the charts below for configuration options and usage details.
 |           | `*yearMin`: 1 - current year + 200                                      |
 |           | `*yearMax`: 1 - current year + 200                                      |
 |           | `format`: M = month, d = day, y = year. 'MM/dd/yyyy' = 01/01/1970       |
-|           |           Default format: 'yyyy-MM-dd'                                  |
+|           | Default format: 'yyyy-MM-dd'                                  |
 | dateTime  | `dayMin`: 1 - 31                                                        |
 |           | `dayMax`: 1 - 31                                                        |
 |           | `monthMin`: 1 - 12                                                      |
@@ -187,16 +187,16 @@ See the charts below for configuration options and usage details.
 |           | `secondMin`: 0 - 59                                                     |
 |           | `secondMax`: 0 - 59                                                     |
 |           | `format`: M = month, d = day, y = year, h = hour, m = minute, s = second|
-|           |           'yyyy-MM-dd hh:mm:ss' = 1970-01-01 12:01:01                   |
-| uuid1     |                                                                         |
-| uuid4     |                                                                         |
-| string    |                                                                         |
-| array     | `*dataType`: all basic types plus `custom`, excluding `array`.          |
+|           | Default format: ISO                                                     |
+| uuid1     | Returns uuid1 GUID                                                      |
+| uuid4     | Returns uuid4 GUID                                                      |
+| string    | `*minLength`: 1 - must be <= `maxLength`                         |
+|           | `*maxLength`: 1 - 8000                                                  |
+| array     | `*dataType`: all basic types plus `custom`. Excludes `array`.           |
 
 #### custom
-The `custom` data type can be used to define an embedded document. This data type is
-useful for JSON objects or NoSQL databases but you may find it useful when you need to create
-relational data for SQL type databases.
+The `custom` data type can be used to define a document within an array. When the `dataType` is set to `custom`
+the `_definition_` attribute is used to define a document schema in exactly the same way as `schema`.
 ```json
 {
   "schema": {
