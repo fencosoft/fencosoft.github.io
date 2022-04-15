@@ -147,8 +147,8 @@ In our example we set the range from 1000 to 9999.
   "schema": {
     "productNumber": { // Define the name of the field
       "type": "int", // Declare a data type
-      "min": 1000, // The lowest value integer in the range
-      "max": 9999 // The highest value integer in the range
+      "min": 1000, // The lowest integer value in the range
+      "max": 9999 // The highest integer value in the range
     }
   }
 }
@@ -158,24 +158,24 @@ In our example we set the range from 1000 to 9999.
 There are 9 basic data types to choose from when building your schema.
 See the charts below for configuration options and usage details.
 
-| Type      | * Required attribute                                                    |
-|:----------|:------------------------------------------------------------------------|
-| bool      | Returns `true` or `false`                                               |
-| float     | `*max`: -9007199254740991 to 9007199254740991                           |
-|           | `*min`: -9007199254740991 to 9007199254740991 (must be less than `max`) |
-|           | `*precision`: 1 to 14                                                   |
-|           | `allowNull`: true or false (allows the value to randomly return `null`) |
-| int       | `*max`: -9007199254740991 to 9007199254740991                           |
-|           | `*min`: -9007199254740991 to 9007199254740991 (must be less than `max`) |
-|           | `allowNull`: true or false (allows the value to randomly return `null`) |
-| date      | `dayMin`: 1 - 31                                                        |
-|           | `dayMax`: 1 - 31                                                        |
-|           | `monthMin`: 1 - 12                                                      |
-|           | `monthMax`: 1 - 12                                                      |
-|           | `*yearMin`: 1 - current year + 200                                      |
-|           | `*yearMax`: 1 - current year + 200                                      |
-|           | `format`: M = month, d = day, y = year. 'MM/dd/yyyy' = 01/01/1970       |
-|           | `allowNull`: true or false (allows the value to randomly return `null`) |
+| Type      | * Required attribute                                                      |
+|:----------|:--------------------------------------------------------------------------|
+| bool      | Returns `true` or `false`                                                 |
+| float     | `*max`: -9007199254740991 to 9007199254740991                             |
+|           | `*min`: -9007199254740991 to 9007199254740991 (must be less than `max`)   |
+|           | `*precision`: 1 to 14                                                     |
+|           | `allowNull`: true or false (allows the value to randomly return `null`)   |
+| int       | `*max`: -9007199254740991 to 9007199254740991                             |
+|           | `*min`: -9007199254740991 to 9007199254740991 (must be less than `max`)   |
+|           | `allowNull`: true or false (allows the value to randomly return `null`)   |
+| date      | `dayMin`: 1 - 31                                                          |
+|           | `dayMax`: 1 - 31                                                          |
+|           | `monthMin`: 1 - 12                                                        |
+|           | `monthMax`: 1 - 12                                                        |
+|           | `*yearMin`: 1 - current year + 200                                        |
+|           | `*yearMax`: 1 - current year + 200                                        |
+|           | `format`: M = month, d = day, y = year. 'MM/dd/yyyy' = 01/01/1970         |
+|           | `allowNull`: true or false (allows the value to randomly return `null`)   |
 |           | Default format: 'yyyy-MM-dd'                                              |
 | dateTime  | `dayMin`: 1 - 31                                                          |   
 |           | `dayMax`: 1 - 31                                                          |
@@ -231,26 +231,26 @@ defines the overall schema.
 Reserved types are strings that can populate commonly used data fields with "real world" values. 
 Some follow specific formats while others are configureable.
 
-| Type         | * Required attribute                                                |
-|:-------------|:--------------------------------------------------------------------|
-| firstName    | A randomly selected first name                                      |
-| lastName     | A randomly selected last name                                       |
-| middleName   | A randomly selected first name or inital                            |
-| fullName     | A randomly selected first and last name with randomized middle name |
-| businessName | A randomly generated business name constructed from business words  |
-| address1     |                                                                     |
-| address2     |                                                                     |
-| city         |                                                                     |
-| state        |                                                                     |
-| stateName    |                                                                     |
-| zip          |                                                                     |
-| country      |                                                                     |
-| phone        |                                                                     |
-| url          |                                                                     |
-| email        |                                                                     |
-| imageUrl     |                                                                     |
-| searchable   |                                                                     |
-| varchar      |                                                                     |
+| Type         | Description                                                         | * Required attribute |
+|:-------------|:--------------------------------------------------------------------|:---------------------|
+| firstName    | A randomly selected first name                                      | `*maxLength`: 1 - 9007199254740991 |
+| lastName     | A randomly selected last name                                       |                      |
+| middleName   | A randomly selected first name or inital                            |                      |
+| fullName     | A randomly selected first and last name with randomized middle name |                      |
+| businessName | A randomly generated business name constructed from business words  |                      |
+| address1     |                                                                     |                      |
+| address2     |                                                                     |                      |
+| city         |                                                                     |                      |
+| state        |                                                                     |                      |
+| stateName    |                                                                     |                      |
+| zip          |                                                                     |                      |
+| country      |                                                                     |                      |
+| phone        |                                                                     |                      |
+| url          |                                                                     |                      |
+| email        |                                                                     |                      |
+| imageUrl     |                                                                     |                      |
+| searchable   |                                                                     |                      |
+| varchar      |                                                                     |                      |
 
 
 ## Response Object
