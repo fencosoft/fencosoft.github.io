@@ -231,26 +231,36 @@ defines the overall schema.
 Reserved types are strings that can populate commonly used data fields with "real world" values. 
 Some follow specific formats while others are configureable.
 
-| Type         | Description                                                         | * Required attribute |
-|:-------------|:--------------------------------------------------------------------|:---------------------|
-| firstName    | A randomly selected first name                                      | `*maxLength`: 1 - 9007199254740991 |
-| lastName     | A randomly selected last name                                       |                      |
-| middleName   | A randomly selected first name or inital                            |                      |
-| fullName     | A randomly selected first and last name with randomized middle name |                      |
-| businessName | A randomly generated business name constructed from business words  |                      |
-| address1     |                                                                     |                      |
-| address2     |                                                                     |                      |
-| city         |                                                                     |                      |
-| state        |                                                                     |                      |
-| stateName    |                                                                     |                      |
-| zip          |                                                                     |                      |
-| country      |                                                                     |                      |
-| phone        |                                                                     |                      |
-| url          |                                                                     |                      |
-| email        |                                                                     |                      |
-| imageUrl     |                                                                     |                      |
-| searchable   |                                                                     |                      |
-| varchar      |                                                                     |                      |
+| Type         | Descrip* Required attributetion                                                      |
+|:-------------|:-------------------------------------------------------------------------------------|
+| firstName    | Returns a randomly selected first name                                               |
+|              | `*maxLength`: 1 - 8000                                                               |
+| lastName     | Returns a randomly selected last name                                                |
+|              | `*maxLength`: 1 - 8000                                                               |
+| middleName   | Returns a randomly selected first name or inital                                     |
+|              | `*maxLength`: 1 - 8000                                                               |
+| fullName     | Returns a randomly selected first & last name with randomized middle name or initial |
+|              | `*maxLength`: 1 - 8000                                                               |
+| businessName | Returns a randomly generated business name constructed from business words           |
+|              | `*maxLength`: 1 - 8000                                                               |
+| address1     | Returns a randomly generated U.S. formatted address                                  |
+|              | `*maxLength`: 25 - 8000                                                              |
+| address2     | Returns a randomly generated U.S. formatted address line 2                           |
+|              | `*maxLength`: 25 - 8000                                                              |
+| city         | Returns a randomly selected U.S. city                                                |
+| state        | Returns a randomly selected U.S. state initials                                      |
+| stateName    | Returns a randomly selected U.S. state name                                          |
+| zip          | Returns a randomly selected U.S. postal code                                         |
+| country      | Returns 'US'                                                                         |
+| phone        | Returns a randomly generated U.S. formatted phone number                             |
+|              | `format`: Use '#' to represent a random number                                       |
+|              | Example: '(###)-###-####' = (555)-555-5555                                           |
+|              | Default format: '###-###-####'                                                       |
+| url          | Returns a randomly generated URL                                                     |
+| email        | Returns a randomly generated email address                                           |
+| imageUrl     | Returns a valid image URL with a randomly generated image thumbnail                  |
+| searchable   | Returns a randomly generated string with human readable words                        |
+| varchar      | Returns a randomly generated string of numbers and letters of random case            |
 
 
 ## Response Object
