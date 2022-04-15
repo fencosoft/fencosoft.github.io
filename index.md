@@ -231,7 +231,7 @@ defines the overall schema.
 Reserved types are strings that can populate commonly used data fields with "real world" values. 
 Some follow specific formats while others are configureable.
 
-| Type         | Descrip* Required attributetion                                                      |
+| Type         | * Required attributetion                                                      |
 |:-------------|:-------------------------------------------------------------------------------------|
 | firstName    | Returns a randomly selected first name                                               |
 |              | `*maxLength`: 1 - 8000                                                               |
@@ -262,6 +262,16 @@ Some follow specific formats while others are configureable.
 | searchable   | Returns a randomly generated string with human readable words                        |
 | varchar      | Returns a randomly generated string of numbers and letters of random case            |
 
+**Note:** If you use any state-based reserved type (city, state, stateName, zip) all related fields in the same record will be real and valid data.
+For example, if you generate fields with state, city and zip in a record, your response would look something like this:
+
+```json
+{
+  "state": "NC", // API returned North Carolina
+  "city": "Caroleen", // A valid city in North Carolina
+  "zip": "28019" // A valid zip code in Caroleen, North Carolina
+}
+```
 
 ## Response Object
 
