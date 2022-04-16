@@ -253,17 +253,19 @@ Some follow specific formats while others are configureable.
 | zip          | Returns a randomly selected U.S. postal code                                         |
 | country      | Returns 'US'                                                                         |
 | phone        | Returns a randomly generated U.S. formatted phone number                             |
-|              | `format`: Use '#' to represent a random number                                       |
+|              | `format`: Use '#' as a placeholder for a random number                               |
 |              | Example: '(###)-###-####' = (555)-555-5555                                           |
 |              | Default format: '###-###-####'                                                       |
-| url          | Returns a randomly generated URL                                                     |
+| url          | Returns a randomly generated URL. The field value will use the same `businessName`   |
+|              |    in the url if `businessName` is used in the record.                               |
 | email        | Returns a randomly generated email address                                           |
 | imageUrl     | Returns a valid image URL with a randomly generated image thumbnail                  |
+|              | Format: 'https://dummyimage.com/`<random integer>`.png'                              |
 | searchable   | Returns a randomly generated string with human readable words                        |
 | varchar      | Returns a randomly generated string of numbers and letters of random case            |
 
 **Note:** If you use any state-based reserved type (city, state, stateName, zip) all related fields in the same record will be real and valid data.
-For example, if you generate fields with state, city and zip in a record, your response would look something like this:
+For example, if you generate fields with state, city and zip in a record, your response will look something like this:
 
 ```json
 {
@@ -301,4 +303,5 @@ The response object is very straightforward and consists of the following fields
   ]
 }
 ```
-
+**Note:** If you experience an exception or unexpected value in any response, please provide the `requestId` guid 
+when contacting support.
