@@ -1,4 +1,4 @@
-theme: jekyll-theme-leap-day
-title: Fencosoft
+remote_theme: just-the-docs/just-the-docs
+title: DataGen
 description: API Documentation & Tutorials
 show_downloads: false

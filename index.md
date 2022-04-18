@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Fencosoft API Documentation
+title: DataGen API Documentation
 ---
 # DataGen API Reference & Tutorial
 
@@ -195,7 +195,7 @@ See the charts below for configuration options and usage details.
 | uuid1     | Returns a uuid1 GUID                                                      |
 | uuid4     | Returns a uuid4 GUID                                                      |
 | string    | `*minLength`: 1 - less than or equal to `maxLength`                       |
-|           | `*maxLength`: 1 - 8000                                                    |
+|           | `*maxLength`: 1 - 50000                                                   |
 |           | `reservedType`: See the [Reserved Types](#reserved-types) table below.    |
 |           | `allowNull`: true or false (allows the value to randomly return `null`)   |
 |           | If `reservedType` is not specified a random varchar string is returned    |
@@ -266,6 +266,8 @@ Some follow specific formats while others are configureable.
 |              | `*maxWords`: 1 - 25000                                                               |
 |              | `*maxLength`: 1 - 50000                                                              |
 | varchar      | Returns a randomly generated string of numbers and letters of random case            |
+|              | `*minLength`: 1 - <= `maxLength`                                                     |
+|              | `*maxLength`: 1 - 50000                                                              |
 
 **Note:** If you use any state-based reserved type (city, state, stateName, zip) all related fields in the same record will be real and valid data.
 For example, if you generate fields with state, city and zip in a record, your response will look something like this:
