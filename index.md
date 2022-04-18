@@ -4,7 +4,7 @@ title: DataGen API Documentation
 ---
 # DataGen API Reference & Tutorial
 
-Welcome to the DataGen API documentation page. 
+Welcome to the DataGen API documentation page.
 Please review this document thoroughly before posting requests to the API.
 
 * * *
