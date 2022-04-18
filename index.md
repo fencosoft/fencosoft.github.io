@@ -203,7 +203,7 @@ See the charts below for configuration options and usage details.
 |           | `maxElements`: 1 - 15000                                                  |
 |           | `*dataType`: All basic types plus `custom` (see below). Excludes `array`. |
 |           | `allowNull`: true or false (allows the value to randomly return `null`)   |
-|           | `duplicates`: true or false. This optional attribute prevents duplicate values for `int, float, searchable` data types. |
+|           | `duplicates`: true or false. This optional attribute prevents duplicate values for `int, float, searchable` data types within a defined array and the values are only unique for that array in a single document. |
 
 The `custom` data type can be used to define a document within an array. When the `dataType` is set to `custom`
 the `_definition_` attribute is used to define a document schema in exactly the same way as the `schema` attribute 
