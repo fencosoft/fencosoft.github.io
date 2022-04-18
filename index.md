@@ -261,7 +261,10 @@ Some follow specific formats while others are configureable.
 | email        | Returns a randomly generated email address                                           |
 | imageUrl     | Returns a valid image URL with a randomly generated image thumbnail                  |
 |              | Format: 'https://dummyimage.com/`<random integer>`.png'                              |
-| searchable   | Returns a randomly generated string with human readable words                        |
+| searchable   | Returns a randomly generated string with human readable words.                       |
+|              | `*minWords`: 1 - <= `maxWords`                                                       |
+|              | `*maxWords`: 1 - 25000                                                               |
+|              | `*maxLength`: 1 - 50000                                                              |
 | varchar      | Returns a randomly generated string of numbers and letters of random case            |
 
 **Note:** If you use any state-based reserved type (city, state, stateName, zip) all related fields in the same record will be real and valid data.
