@@ -203,6 +203,7 @@ See the charts below for configuration options and usage details.
 |           | `maxElements`: 1 - 15000                                                  |
 |           | `*dataType`: All basic types plus `custom` (see below). Excludes `array`. |
 |           | `allowNull`: true or false (allows the value to randomly return `null`)   |
+|           | `duplicates`: true or false. This optional attribute prevents duplicate values for `int, float, searchable` data types. |
 
 The `custom` data type can be used to define a document within an array. When the `dataType` is set to `custom`
 the `_definition_` attribute is used to define a document schema in exactly the same way as the `schema` attribute 
@@ -266,7 +267,7 @@ Some follow specific formats while others are configureable.
 |              | `*maxWords`: 1 - 25000                                                               |
 |              | `*maxLength`: 1 - 50000                                                              |
 | varchar      | Returns a randomly generated string of numbers and letters of random case            |
-|              | `*minLength`: 1 - <= `maxLength`                                                     |
+|              | `*minLength`: 1 - less than or equal to `maxLength`                                                     |
 |              | `*maxLength`: 1 - 50000                                                              |
 
 **Note:** If you use any state-based reserved type (city, state, stateName, zip) all related fields in the same record will be real and valid data.
