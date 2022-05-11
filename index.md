@@ -9,7 +9,7 @@ Please review this document thoroughly before posting requests to the API.
 
 * * *
 ## Url Parameters
-The only required parameter is `quantity`.
+The only required parameter is `/api/v1/generate/{quantity}`.
 
 For example, if you would like 500 documents returned you would set the `quantity` parameter like this:
 
