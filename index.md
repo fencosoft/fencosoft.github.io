@@ -11,7 +11,7 @@ Please review this document thoroughly before posting requests to the API.
 ## Url Parameters
 The only required parameter is `/api/v1/generate/{quantity}`.
 
-For example, if you would like 500 documents returned you would set the `quantity` parameter like this:
+For example, if you would like 500 records returned you would set the `quantity` parameter like this:
 
 ```
 /api/v1/generate/500
