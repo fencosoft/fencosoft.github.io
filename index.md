@@ -10,7 +10,6 @@ Please review this document thoroughly before posting requests to the API.
 * * *
 ## Url Parameters
 The only required parameter is `/api/v1/generate/{quantity}`.
-`quantity` has a hard limit of 15000. However, if the response payload were to exceed 2mb then the max `quantity` may be less and the API will respond with a suggested `quantity`.
 
 For example, if you would like 500 records returned you would set the `quantity` parameter like this:
 
@@ -18,6 +17,7 @@ For example, if you would like 500 records returned you would set the `quantity`
 /api/v1/generate/500
 ```
 
+Please note that `quantity` has a hard limit of 15000. However, if the response payload were to exceed 2mb then the max `quantity` may be less and the API will respond with a suggested `quantity`.
 
 ## Request Body
 The request body requires the `schema` object.
